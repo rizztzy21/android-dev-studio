@@ -1,0 +1,307 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: monospace;
+}
+
+body {
+  background: #0b0f14;
+  color: #d8dee9;
+}
+
+button {
+  font: inherit;
+}
+
+.studio {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #0b0f14;
+}
+
+.topbar {
+  height: 54px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  border-bottom: 1px solid #202731;
+  background: #11161d;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: bold;
+}
+
+.brandIcon {
+  font-size: 20px;
+}
+
+.projectName {
+  margin-left: auto;
+  margin-right: 15px;
+  color: #7f8a99;
+  font-size: 12px;
+}
+
+.iconButton {
+  border: 0;
+  background: transparent;
+  color: #9da8b7;
+  font-size: 18px;
+}
+
+.workspace {
+  min-height: 0;
+  flex: 1;
+  display: flex;
+}
+
+.sidebar {
+  width: 210px;
+  flex-shrink: 0;
+  border-right: 1px solid #202731;
+  background: #0f141a;
+  padding: 13px 8px;
+}
+
+.sidebarTitle {
+  font-size: 11px;
+  color: #6f7b89;
+  margin: 0 8px 14px;
+  letter-spacing: 1px;
+}
+
+.projectRoot {
+  padding: 7px 8px;
+  font-size: 12px;
+  color: #b9c2ce;
+}
+
+.fileTree {
+  margin-top: 5px;
+}
+
+.fileItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: #aeb8c6;
+  text-align: left;
+  font-size: 12px;
+}
+
+.fileItem:hover,
+.fileItem.active {
+  background: #1b2530;
+  color: #ffffff;
+}
+
+.editorArea {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs {
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  border-bottom: 1px solid #202731;
+  background: #0d1218;
+}
+
+.tab {
+  min-width: 120px;
+  padding: 12px 13px;
+  font-size: 12px;
+  border-right: 1px solid #202731;
+}
+
+.tab.active {
+  background: #151b23;
+  color: white;
+  border-top: 2px solid #6aa9ff;
+  padding-top: 10px;
+}
+
+.close {
+  float: right;
+  margin-left: 15px;
+  color: #657180;
+}
+
+.editor {
+  min-height: 0;
+  flex: 1;
+  display: flex;
+  overflow: auto;
+  background: #0b0f14;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.lineNumbers {
+  width: 42px;
+  flex-shrink: 0;
+  padding: 14px 8px;
+  text-align: right;
+  color: #46515f;
+  user-select: none;
+}
+
+.lineNumbers span {
+  display: block;
+}
+
+.editor pre {
+  margin: 0;
+  padding: 14px 12px;
+  color: #c7d0dc;
+}
+
+.terminal {
+  height: 180px;
+  flex-shrink: 0;
+  border-top: 1px solid #202731;
+  background: #080b0f;
+}
+
+.terminalHeader {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  color: #778392;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.terminalHeader button {
+  border: 0;
+  background: transparent;
+  color: #697583;
+}
+
+.terminalBody {
+  padding: 5px 14px;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.prompt {
+  color: #6aa9ff;
+  margin-right: 7px;
+}
+
+.success {
+  color: #70c995;
+}
+
+.cursor {
+  color: #6aa9ff;
+}
+
+.statusbar {
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0 10px;
+  background: #17202a;
+  color: #8d9aaa;
+  font-size: 10px;
+}
+
+.statusbar span:first-child {
+  color: #70c995;
+}
+
+@media (max-width: 650px) {
+  .sidebar {
+    width: 145px;
+  }
+
+  .projectName {
+    display: none;
+  }
+
+  .brand {
+    font-size: 12px;
+  }
+
+  .editor {
+    font-size: 10px;
+  }
+
+  .terminal {
+    height: 145px;
+  }
+}
+
+.folder {
+  padding: 7px 10px;
+  color: #8f9baa;
+  font-size: 12px;
+}
+
+.editorActions {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  border-top: 1px solid #202731;
+  background: #10151c;
+}
+
+.editorActions button {
+  border: 1px solid #2a3440;
+  border-radius: 5px;
+  padding: 6px 12px;
+  font-size: 11px;
+  color: #cbd4df;
+  background: #18202a;
+}
+
+.editorActions button:disabled {
+  opacity: 0.45;
+}
+
+.editorActions .runButton {
+  background: #183522;
+  border-color: #285c39;
+}
+
+.editorActions .buildButton {
+  background: #252b38;
+}
+
+.unsaved {
+  color: #6aa9ff;
+  margin-left: 8px;
+}
+
+.ready {
+  color: #70c995;
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Android Dev Studio</string>
+    <string name="title_activity_main">Android Dev Studio</string>
+    <string name="package_name">com.rizztzy21.devstudio</string>
+    <string name="custom_url_scheme">com.rizztzy21.devstudio</string>
+</resources>

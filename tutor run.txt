@@ -1,0 +1,34 @@
+cara run/upload file server :
+
+1. UPLOUD FILE SERVER 
+
+2. ke terminal vps ketik unzip server.zip
+   kalo belum di install silakan install lebih dulu command nya apt install unzip
+   kalau sudah tinggal unzip
+
+3. command run node api.js
+   dahulukan install module command nya :
+
+npm i
+pip3 install aiohttp
+pip3 install camoufox
+
+   kalau belum install nodejs install terlebih dahulu
+
+cara install vps : 
+
+1. apt-get install libasound2 kalo muncul gambar atau menu tinggal enter aja dan kalo ada tulisan 
+   di suruh pilih y/n ketik saja y habis itu enter
+
+2. apt install nodejs
+
+3. apt install npm
+
+4. apt install python3-pip
+
+5. curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+source ~/.bashrc
+
+6. nvm install 20
+
+kalau sudah tinggal run saja
